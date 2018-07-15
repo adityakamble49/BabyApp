@@ -43,7 +43,6 @@ public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
         holder.name.setText(babyNames.get(position).getName());
 
     }
