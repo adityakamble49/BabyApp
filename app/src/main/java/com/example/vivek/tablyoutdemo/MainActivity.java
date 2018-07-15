@@ -1,5 +1,7 @@
 package com.example.vivek.tablyoutdemo;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.PrimaryKey;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -43,13 +45,17 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             reader.readLine();
+             String mGender = "";
+             String mMeaning="";
+             String mName="";
+             String mOrigin="";
 
             while ((line = reader.readLine()) != null) {
                 Log.d("MyActivity", "Line: " + line);
 
                 String[] tokens = line.split(",");
-
-                BabyName name = new BabyName();
+                String gender="";
+                BabyName name = new BabyName(mGender,mMeaning,mName,mOrigin);
                 name.setGender(tokens[1]);
                 name.setMeaning(tokens[2]);
                 name.setName(tokens[3]);
