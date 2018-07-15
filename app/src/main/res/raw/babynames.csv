@@ -13215,7 +13215,7 @@ id,Gender,Meaning,Name,Origin
 13213,Girl,Heart's blood; soul,Muhja,Arabic
 13214,Girl,"Heart's blood, soul",Muhjah,Arabic
 13215,Boy,Beneficent; charitable,Muhsin,Arabic
-13216,Boy,Rightly guided,Muhtadî,Arabic
+13216,Boy,Rightly guided,Muhtadï¿½,Arabic
 13217,Boy,Rightly guided,Muhtady,Arabic
 13218,Boy,Helper,Muin,Arabic
 13219,Girl,Sea fair,Muireann,Irish
@@ -13291,7 +13291,7 @@ id,Gender,Meaning,Name,Origin
 13289,Girl,Bitter,Murron,Celtic/Gaelic
 13290,Boy,"Teacher, spiritual guide",Murshid,Arabic
 13291,Boy,Satisfied; content,Murtadhy,Arabic
-13292,Boy,"Satisfied, content",Murtadî,Arabic
+13292,Boy,"Satisfied, content",Murtadï¿½,Arabic
 13293,Boy,"Satisfied, content","Murtadi, murtadhy",Arabic
 13294,Boy,Chosen,Murtaza,Arabic
 13295,Girl,Pearl,Murvareed,Arabic
@@ -14476,7 +14476,7 @@ id,Gender,Meaning,Name,Origin
 14474,Girl,Dawn,Oditi,Hindi
 14475,Boy,Wealthy protector,Odon,Hungarian
 14476,Boy,Full of wrath,Odysseus,Greek
-14477,Boy,Keeper of the fief,Odön,Hungarian
+14477,Boy,Keeper of the fief,Odï¿½n,Hungarian
 14478,Girl,Divine,Oeshi,Bengali
 14479,Girl,Gold,Ofira,Biblical
 14480,Girl,Gold,Ofira,Hebrew
@@ -16762,14 +16762,14 @@ id,Gender,Meaning,Name,Origin
 16760,Boy,Beautiful,Sabeeh,Arabic
 16761,Girl,Beautiful; lady with fair complexion,"Sabeehah,sabiha",Arabic
 16762,Boy,Sword,Saber,French
-16763,Boy,Beautiful,Sabîh,Arabic
+16763,Boy,Beautiful,Sabï¿½h,Arabic
 16764,Boy,Beautiful,"Sabih, sabeeh",Arabic
 16765,Girl,From the sabines,Sabin,Italian
 16766,Girl,Derived from sabine,Sabina,Latin
 16767,Girl,An ancient tribe,"Sabina, savine, savina",Arabic
 16768,Girl,Of ancient italian culture,Sabine,Latin
 16769,Boy,Another name for god; primary; first; former,Sabiq,Arabic
-16770,Boy,"Patient, one who endures hardships without complaint",Sabîr,Arabic
+16770,Boy,"Patient, one who endures hardships without complaint",Sabï¿½r,Arabic
 16771,Boy,Patient,"Sabir, sabeer",Arabic
 16772,Girl,Patient,Sabirah,Arabic
 16773,Girl,The sun,Sabita,Bengali
@@ -21926,7 +21926,7 @@ id,Gender,Meaning,Name,Origin
 21924,Girl,Name for hazrat fatimah zahra,Zakiyah,Arabic
 21925,Boy,Pure,Zakiyy,Arabic
 21926,Girl,Pure,Zakiyyah,Arabic
-21927,Boy,"Thrower, hitter",Zalán,Hungarian
+21927,Boy,"Thrower, hitter",Zalï¿½n,Hungarian
 21928,Girl,Sea strength,Zale,Greek
 21929,Girl,Same as zulaikha,Zaleekhah,Arabic
 21930,Girl,N/a,Zalia,Hebrew
@@ -21944,7 +21944,7 @@ id,Gender,Meaning,Name,Origin
 21942,Boy,Another name for god; biased; security,Zamin,Arabic
 21943,Boy,Song bird,Zamir,Biblical
 21944,Boy,Song bird,Zamir,Hebrew
-21945,Boy,Plough-land,Zámor,Hungarian
+21945,Boy,Plough-land,Zï¿½mor,Hungarian
 21946,Girl,From the city zamora,Zamora,Spanish
 21947,Boy,Well fed,Zan,Biblical
 21948,Boy,Well fed,Zan,Hebrew
@@ -22149,4 +22149,3 @@ id,Gender,Meaning,Name,Origin
 22147,Girl,Gazelle,Zwi,Scandinavian
 22148,Girl,From teresa,Zyta,Polish
 22149,Girl,Rose flower,Zytka,Polish
-

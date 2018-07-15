@@ -1,21 +1,27 @@
 package com.example.vivek.tablyoutdemo.model;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+@Entity(tableName = "BabyNames")
 public class BabyName {
 
+   @ColumnInfo(name = "gender")
     private String Gender;
+    @ColumnInfo(name = "meaning")
     private String Meaning;
+    @PrimaryKey
+    @ColumnInfo(name = "name")
     private String Name;
+
+    @ColumnInfo(name = "origin")
     private String Origin;
 
-    @Override
-    public String toString() {
-        return "BabyName{" +
-                "Gender='" + Gender + '\'' +
-                ", Meaning='" + Meaning + '\'' +
-                ", Name='" + Name + '\'' +
-                ", Origin='" + Origin + '\'' +
-                '}';
-    }
+
 
     public String getGender() {
         return Gender;
@@ -47,5 +53,15 @@ public class BabyName {
 
     public void setOrigin(String origin) {
         Origin = origin;
+    }
+
+    @Override
+    public String toString() {
+        return "BabyName{" +
+                "Gender='" + Gender + '\'' +
+                ", Meaning='" + Meaning + '\'' +
+                ", Name='" + Name + '\'' +
+                ", Origin='" + Origin + '\'' +
+                '}';
     }
 }
