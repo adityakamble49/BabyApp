@@ -1,13 +1,12 @@
 package com.example.vivek.tablyoutdemo;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.PrimaryKey;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.example.vivek.tablyoutdemo.adapter.BabyAdapter;
+import com.example.vivek.tablyoutdemo.database.AppDatabase;
 import com.example.vivek.tablyoutdemo.model.BabyName;
 
 import java.io.BufferedReader;
@@ -23,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     List<BabyName> babyNames = new ArrayList<>();
     RecyclerView recyclerView;
+    AppDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,25 +45,21 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             reader.readLine();
-             String mGender = "";
-             String mMeaning="";
-             String mName="";
-             String mOrigin="";
-
+            String mGender,mMeaning,mName,mOrigin;
             while ((line = reader.readLine()) != null) {
                 Log.d("MyActivity", "Line: " + line);
 
                 String[] tokens = line.split(",");
-                String gender="";
-                BabyName name = new BabyName(mGender,mMeaning,mName,mOrigin);
-                name.setGender(tokens[1]);
-                name.setMeaning(tokens[2]);
-                name.setName(tokens[3]);
-                name.setOrigin(tokens[4]);
 
+                mGender=tokens[1];
+                mMeaning=tokens[2];
+                mName=tokens[3];
+                mOrigin=tokens[4];
 
-                babyNames.add(name);
-                Log.d(TAG, "Just created: " + name);
+                BabyName babyName=new BabyName(mGender,mMeaning,mName,mOrigin);
+                database.babyDao().insert(babyName);
+                babyNames.add(babyName);
+                Log.d(TAG, "Just created: " + mGender+mMeaning+mName+mOrigin);
 
             }
         } catch (IOException e) {

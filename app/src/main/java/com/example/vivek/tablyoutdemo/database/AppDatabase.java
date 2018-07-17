@@ -14,7 +14,7 @@ public  abstract  class AppDatabase extends RoomDatabase{
 
     private static final Object LOCK = new Object();
     private static final String DATABASE_NAME = "babyDb";
-    public abstract BabyDao babyDao();
+
     private static AppDatabase INSTANCE;
 
     public static AppDatabase getDatabase(Context context) {
@@ -31,5 +31,7 @@ public  abstract  class AppDatabase extends RoomDatabase{
         Log.d(TAG, "getDatabase instance  ");
         return INSTANCE;
     }
+
+    public abstract BabyDao babyDao();
 
 }

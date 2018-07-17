@@ -16,6 +16,7 @@ public class BabyName {
     @ColumnInfo(name = "meaning")
     private String Meaning;
     @PrimaryKey
+
     @NonNull
     @ColumnInfo(name = "name")
     private String Name;
@@ -23,8 +24,8 @@ public class BabyName {
     @ColumnInfo(name = "origin")
     private String Origin;
 
+
     public BabyName(String gender, String meaning, @NonNull String name, String origin) {
-        super();
         Gender = gender;
         Meaning = meaning;
         Name = name;
@@ -47,11 +48,12 @@ public class BabyName {
         Meaning = meaning;
     }
 
+    @NonNull
     public String getName() {
         return Name;
     }
 
-    public void setName(String name) {
+    public void setName(@NonNull String name) {
         Name = name;
     }
 
@@ -61,15 +63,5 @@ public class BabyName {
 
     public void setOrigin(String origin) {
         Origin = origin;
-    }
-
-    @Override
-    public String toString() {
-        return "BabyName{" +
-                "Gender='" + Gender + '\'' +
-                ", Meaning='" + Meaning + '\'' +
-                ", Name='" + Name + '\'' +
-                ", Origin='" + Origin + '\'' +
-                '}';
     }
 }
