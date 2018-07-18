@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        database=AppDatabase.getDatabase(getApplicationContext());
         recyclerView = findViewById(R.id.recyclerview);
+       readData();
         BabyAdapter adapter = new BabyAdapter(this, babyNames);
-        readData();
         recyclerView.setAdapter(adapter);
-
 
     }
 
@@ -56,7 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 mName=tokens[3];
                 mOrigin=tokens[4];
 
+
                 BabyName babyName=new BabyName(mGender,mMeaning,mName,mOrigin);
+                babyName.setGender(mGender);
+                babyName.setName(mName);
+                babyName.setOrigin(mOrigin);
+                babyName.setMeaning(mMeaning);
                 database.babyDao().insert(babyName);
                 babyNames.add(babyName);
                 Log.d(TAG, "Just created: " + mGender+mMeaning+mName+mOrigin);

@@ -14,7 +14,7 @@ import java.util.List;
 @Dao
 public interface  BabyDao {
 
-    @Query("SELECT * FROM BabyNames")
+    @Query("SELECT * FROM BabyTable")
     List<BabyName> getAllData();
 
     @Insert

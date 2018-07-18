@@ -2,66 +2,83 @@ package com.example.vivek.tablyoutdemo.model;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-@Entity(tableName = "BabyNames")
+@Entity(tableName = "BabyTable")
 public class BabyName {
 
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    private int id;
+
    @ColumnInfo(name = "gender")
-    private String Gender;
+    private String gender;
     @ColumnInfo(name = "meaning")
-    private String Meaning;
-    @PrimaryKey
+    private String meaning;
 
     @NonNull
     @ColumnInfo(name = "name")
-    private String Name;
+    private String name;
 
     @ColumnInfo(name = "origin")
-    private String Origin;
+    private String origin;
 
-
+    @Ignore
     public BabyName(String gender, String meaning, @NonNull String name, String origin) {
-        Gender = gender;
-        Meaning = meaning;
-        Name = name;
-        Origin = origin;
+        this.gender = gender;
+        this.meaning = meaning;
+        this.name = name;
+        this.origin = origin;
+    }
+
+    public BabyName(int id, String gender, String meaning, @NonNull String name, String origin) {
+        this.id = id;
+        this.gender = gender;
+        this.meaning = meaning;
+        this.name = name;
+        this.origin = origin;
     }
 
     public String getGender() {
-        return Gender;
+        return gender;
     }
 
     public void setGender(String gender) {
-        Gender = gender;
+        this.gender = gender;
     }
 
     public String getMeaning() {
-        return Meaning;
+        return meaning;
     }
 
     public void setMeaning(String meaning) {
-        Meaning = meaning;
+        this.meaning = meaning;
     }
 
     @NonNull
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(@NonNull String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getOrigin() {
-        return Origin;
+        return origin;
     }
 
     public void setOrigin(String origin) {
-        Origin = origin;
+        this.origin = origin;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
