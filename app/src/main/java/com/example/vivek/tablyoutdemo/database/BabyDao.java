@@ -14,11 +14,17 @@ import java.util.List;
 @Dao
 public interface  BabyDao {
 
-    @Query("SELECT * FROM BabyTable")
-    List<BabyName> getAllData();
+    @Query("SELECT * FROM BabyTable LIMIT 100")
+    LiveData<List<BabyName>> getAllData();
+
+    @Query("SELECT * FROM BabyTable LIMIT 100")
+    List<BabyName> getAllDataDirect();
 
     @Insert
     void insert(BabyName babyName);
+
+    @Insert
+    void insertAll(List<BabyName> babyNames);
 
     @Delete
     void Delete(BabyName babyName);

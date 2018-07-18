@@ -11,17 +11,20 @@ import android.widget.TextView;
 import com.example.vivek.tablyoutdemo.R;
 import com.example.vivek.tablyoutdemo.model.BabyName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.MyViewHolder> {
     private Context context;
-    private List<BabyName> babyNames;
+    private List<BabyName> babyNames = new ArrayList<>();
 
-    public BabyAdapter(Context context, List<BabyName> babyNames) {
+    public BabyAdapter(Context context) {
         this.context = context;
-        this.babyNames = babyNames;
     }
 
+    public void setBabyNames(List<BabyName> babyNames) {
+        this.babyNames = babyNames;
+    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
             TextView name;
